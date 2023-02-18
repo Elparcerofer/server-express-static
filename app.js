@@ -1,14 +1,16 @@
 const express = require('express')
 const app = express()
-const port = 8550
+require('dotenv').config();
+const port = process.env.PORT
 
 //Servir contenido estatico
 app.use(express.static('public'))
 
-
-
 // app.get('/', (req, res)=> {
-//   res.send('Home')
+//   res.render('home', {
+//     nombre: 'Adrian Becerra',
+//     titulo: 'Aprendiendo Node'
+//   })
 // })
 
 app.get('/generic', (req, res)=> {
